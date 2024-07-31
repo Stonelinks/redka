@@ -29,7 +29,7 @@ func Parse(args [][]byte) (redis.Cmd, error) {
 	case "flushdb":
 		return key.ParseFlushDB(b)
 	case "info":
-		return server.ParseOK(b)
+		return conn.ParseInfo(b)
 	case "lolwut":
 		return server.ParseLolwut(b)
 
